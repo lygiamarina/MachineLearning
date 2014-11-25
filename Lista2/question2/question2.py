@@ -30,7 +30,7 @@ dList = [2,3,5,10]
 for d in dList:
 	formulaString = vazao + ' ~ 1'
 	
-	for expo in range(d+1):
+	for expo in range(1,d+1):
 		formulaString += ' + I('+hora+' ** '+str(expo)+')'
 		formulaString += ' + I('+latencia+' ** '+str(expo)+')'
 
@@ -41,13 +41,15 @@ for d in dList:
 	X = numpy.arange(data[['Col3']].min(), data[['Col3']].max(), data[['Col3']].max()/50)
 	Y = numpy.arange(data[['Col6']].min(), data[['Col6']].max(), data[['Col6']].max()/50)
 	X, Y = numpy.meshgrid(X,Y)
-	Z = [[poly_2.params[0]]*len(X)]*len(Y)
+	Z = poly_2.params[0]
+	
+	print poly_2.params
 	
 	for expo in range(1,d+1):
-		Z += poly_2.params[2*expo-1]*(X**expo) + poly_2.params[2*expo]*(Y**expo)
+		Z += poly_2.params[(2*expo)-1]*(X**expo) + poly_2.params[2*expo]*(Y**expo)
 
 	axes.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='hot')
-	axes.set_title('Question 2 - Bivariate Polynomial Regression - '+str(d))
+	axes.set_title('Question 2 - Bivariate Polynomial Regression - d = '+str(d))
 	axes.set_xlabel('Hora')
 	axes.set_ylabel('Latencia')
 	axes.set_zlabel('Predicted Vazao')
