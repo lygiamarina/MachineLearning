@@ -1,3 +1,4 @@
+import sys
 import numpy
 import pandas
 import pylab
@@ -34,16 +35,18 @@ for d in dList:
 		formulaString += ' + I('+hora+' ** '+str(expo)+')'
 		formulaString += ' + I('+latencia+' ** '+str(expo)+')'
 
-	poly_2 = smFormula.ols(formula=formulaString, data=data).fit()
+	poly_2 = smFormula.gls(formula=formulaString, data=data).fit()
+	
+	
+	sys.stdout = open("summaryD"+str(d)+".txt", 'w')
+	print poly_2.summary()
 	
 	figure = pylab.figure()
 	axes = Axes3D(figure)
-	X = numpy.arange(data[['Col3']].min(), data[['Col3']].max(), data[['Col3']].max()/50)
-	Y = numpy.arange(data[['Col6']].min(), data[['Col6']].max(), data[['Col6']].max()/50)
+	X = numpy.arange(data[['Col3']].min(), data[['Col3']].max(), (data[['Col3']].max()-data[['Col3']].min())/80)
+	Y = numpy.arange(data[['Col6']].min(), data[['Col6']].max(), (data[['Col6']].max()-data[['Col6']].min())/80)
 	X, Y = numpy.meshgrid(X,Y)
-	Z = poly_2.params[0]
-	
-	print poly_2.params
+	Z = numpy.array([[poly_2.params[0]]*len(X)]*len(Y))
 	
 	for expo in range(1,d+1):
 		Z += poly_2.params[(2*expo)-1]*(X**expo) + poly_2.params[2*expo]*(Y**expo)
@@ -54,6 +57,6 @@ for d in dList:
 	axes.set_ylabel('Latencia')
 	axes.set_zlabel('Predicted Vazao')
 	
-	axes.view_init(elev=10., azim=50)
+	axes.view_init(elev=30., azim=150)
 	pylab.savefig("d"+str(d)+".png")
 	
