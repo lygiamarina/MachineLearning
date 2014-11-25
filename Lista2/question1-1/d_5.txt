@@ -1,0 +1,24 @@
+
+Call:
+lm(formula = latencia ~ poly(hora, dInt))
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-36.37  -8.77  -3.98   4.22 672.94 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(>|t|)    
+(Intercept)        25.2758     0.3822  66.137  < 2e-16 ***
+poly(hora, dInt)1 151.7936    22.3662   6.787 1.35e-11 ***
+poly(hora, dInt)2 138.8135    22.3662   6.206 6.07e-10 ***
+poly(hora, dInt)3 -14.0827    22.3662  -0.630   0.5290    
+poly(hora, dInt)4  46.6540    22.3662   2.086   0.0371 *  
+poly(hora, dInt)5  19.2456    22.3662   0.860   0.3896    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 22.37 on 3419 degrees of freedom
+Multiple R-squared:  0.02567,	Adjusted R-squared:  0.02424 
+F-statistic: 18.01 on 5 and 3419 DF,  p-value: < 2.2e-16
+
+'log Lik.' -15500.22 (df=7)

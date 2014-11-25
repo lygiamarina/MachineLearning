@@ -1,0 +1,24 @@
+
+Call:
+lm(formula = vazao ~ poly(hora, dInt))
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-12142874     20366    308349    366179    822376 
+
+Coefficients:
+                  Estimate Std. Error t value Pr(>|t|)    
+(Intercept)       12039801      15632 770.224  < 2e-16 ***
+poly(hora, dInt)1 -3854278     914813  -4.213 2.58e-05 ***
+poly(hora, dInt)2 -2907215     914813  -3.178   0.0015 ** 
+poly(hora, dInt)3 -1807810     914813  -1.976   0.0482 *  
+poly(hora, dInt)4  -843017     914813  -0.922   0.3568    
+poly(hora, dInt)5  2022298     914813   2.211   0.0271 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 914800 on 3419 degrees of freedom
+Multiple R-squared:  0.01085,	Adjusted R-squared:  0.0094 
+F-statistic: 7.498 on 5 and 3419 DF,  p-value: 5.206e-07
+
+'log Lik.' -51870.04 (df=7)
