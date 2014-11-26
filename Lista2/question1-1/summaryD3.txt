@@ -1,0 +1,28 @@
+                            GLS Regression Results                            
+==============================================================================
+Dep. Variable:                   Col6   R-squared:                       0.024
+Model:                            GLS   Adj. R-squared:                  0.023
+Method:                 Least Squares   F-statistic:                     28.30
+Date:                Wed, 26 Nov 2014   Prob (F-statistic):           4.52e-18
+Time:                        08:55:02   Log-Likelihood:                -15503.
+No. Observations:                3425   AIC:                         3.101e+04
+Df Residuals:                    3421   BIC:                         3.104e+04
+Df Model:                           3                                         
+================================================================================
+                   coef    std err          t      P>|t|      [95.0% Conf. Int.]
+--------------------------------------------------------------------------------
+Intercept       26.1217      1.328     19.677      0.000        23.519    28.725
+I(Col3 ** 1)    -1.1986      0.511     -2.344      0.019        -2.201    -0.196
+I(Col3 ** 2)     0.0887      0.053      1.688      0.091        -0.014     0.192
+I(Col3 ** 3)    -0.0009      0.002     -0.629      0.529        -0.004     0.002
+==============================================================================
+Omnibus:                     6735.314   Durbin-Watson:                   1.659
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):         20260501.482
+Skew:                          15.367   Prob(JB):                         0.00
+Kurtosis:                     378.535   Cond. No.                     1.75e+04
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.75e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+Col6 ~ 1 + I(Col3 ** 1) + I(Col3 ** 2) + I(Col3 ** 3) + I(Col3 ** 4) + I(Col3 ** 5)

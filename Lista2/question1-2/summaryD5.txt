@@ -1,0 +1,30 @@
+                            GLS Regression Results                            
+==============================================================================
+Dep. Variable:                   Col5   R-squared:                       0.011
+Model:                            GLS   Adj. R-squared:                  0.009
+Method:                 Least Squares   F-statistic:                     7.498
+Date:                Wed, 26 Nov 2014   Prob (F-statistic):           5.21e-07
+Time:                        08:55:07   Log-Likelihood:                -51870.
+No. Observations:                3425   AIC:                         1.038e+05
+Df Residuals:                    3419   BIC:                         1.038e+05
+Df Model:                           5                                         
+================================================================================
+                   coef    std err          t      P>|t|      [95.0% Conf. Int.]
+--------------------------------------------------------------------------------
+Intercept     1.203e+07   6.84e+04    175.784      0.000      1.19e+07  1.22e+07
+I(Col3 ** 1)  1.246e+05   6.49e+04      1.919      0.055     -2729.553  2.52e+05
+I(Col3 ** 2)  -4.09e+04   1.85e+04     -2.216      0.027     -7.71e+04 -4709.294
+I(Col3 ** 3)  4795.9852   2082.652      2.303      0.021       712.617  8879.353
+I(Col3 ** 4)  -231.0206    100.731     -2.293      0.022      -428.519   -33.522
+I(Col3 ** 5)     3.8590      1.746      2.211      0.027         0.436     7.282
+==============================================================================
+Omnibus:                     4257.043   Durbin-Watson:                   1.051
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):           671410.943
+Skew:                          -6.688   Prob(JB):                         0.00
+Kurtosis:                      70.275   Cond. No.                     1.19e+07
+==============================================================================
+
+Warnings:
+[1] The condition number is large, 1.19e+07. This might indicate that there are
+strong multicollinearity or other numerical problems.
+Col5 ~ 1 + I(Col3 ** 1) + I(Col3 ** 2) + I(Col3 ** 3) + I(Col3 ** 4) + I(Col3 ** 5) + I(Col3 ** 6) + I(Col3 ** 7) + I(Col3 ** 8) + I(Col3 ** 9) + I(Col3 ** 10)

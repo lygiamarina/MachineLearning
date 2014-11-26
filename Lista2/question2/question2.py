@@ -2,7 +2,6 @@ import sys
 import numpy
 import pandas
 import pylab
-from pandas import DataFrame
 import statsmodels.formula.api as smFormula
 from mpl_toolkits.mplot3d import Axes3D
 
