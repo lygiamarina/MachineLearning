@@ -3,8 +3,8 @@
 Dep. Variable:                   Col5   R-squared:                       0.107
 Model:                            GLS   Adj. R-squared:                  0.105
 Method:                 Least Squares   F-statistic:                     51.05
-Date:                Mon, 24 Nov 2014   Prob (F-statistic):           1.72e-78
-Time:                        23:14:16   Log-Likelihood:                -51695.
+Date:                Thu, 27 Nov 2014   Prob (F-statistic):           1.72e-78
+Time:                        22:11:52   Log-Likelihood:                -51695.
 No. Observations:                3425   AIC:                         1.034e+05
 Df Residuals:                    3416   BIC:                         1.035e+05
 Df Model:                           8                                         

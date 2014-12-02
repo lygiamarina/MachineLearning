@@ -49,13 +49,14 @@ for d in dList:
 	
 	for expo in range(1,d+1):
 		Z += poly_2.params[(2*expo)-1]*(X**expo) + poly_2.params[2*expo]*(Y**expo)
-
-	axes.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap='hot')
+		
+	axes.plot_surface(X, Y, Z, rstride=1, cmap='hot', alpha=0.3)
 	axes.set_title('Question 2 - Bivariate Polynomial Regression - d = '+str(d))
 	axes.set_xlabel('Hora')
 	axes.set_ylabel('Latencia')
-	axes.set_zlabel('Predicted Vazao')
+	axes.set_zlabel('Vazao')
 	
-	axes.view_init(elev=30., azim=150)
+	axes.view_init(elev=30., azim=22)
+	axes.scatter(data.Col3, data.Col6, data.Col5)
 	pylab.savefig("d"+str(d)+".png")
 	
