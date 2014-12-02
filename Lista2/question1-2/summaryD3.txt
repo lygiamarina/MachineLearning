@@ -1,10 +1,10 @@
-                            GLS Regression Results                            
+                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                   Col5   R-squared:                       0.009
-Model:                            GLS   Adj. R-squared:                  0.008
+Model:                            OLS   Adj. R-squared:                  0.008
 Method:                 Least Squares   F-statistic:                     10.57
-Date:                Wed, 26 Nov 2014   Prob (F-statistic):           6.42e-07
-Time:                        08:55:07   Log-Likelihood:                -51873.
+Date:                Tue, 02 Dec 2014   Prob (F-statistic):           6.42e-07
+Time:                        20:54:08   Log-Likelihood:                -51873.
 No. Observations:                3425   AIC:                         1.038e+05
 Df Residuals:                    3421   BIC:                         1.038e+05
 Df Model:                           3                                         
@@ -25,4 +25,3 @@ Kurtosis:                      70.480   Cond. No.                     1.75e+04
 Warnings:
 [1] The condition number is large, 1.75e+04. This might indicate that there are
 strong multicollinearity or other numerical problems.
-Col5 ~ 1 + I(Col3 ** 1) + I(Col3 ** 2) + I(Col3 ** 3) + I(Col3 ** 4) + I(Col3 ** 5)

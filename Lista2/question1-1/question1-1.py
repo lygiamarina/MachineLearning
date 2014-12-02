@@ -31,10 +31,8 @@ for d in dList:
 	
 	for expo in range(1,d+1):
 		formulaString += ' + I('+hora+' ** '+str(expo)+')'
-		
-	print formulaString
 
-	poly_2 = smFormula.gls(formula=formulaString, data=data).fit()
+	poly_2 = smFormula.ols(formula=formulaString, data=data).fit()
 	
 	sys.stdout = open("summaryD"+str(d)+".txt", 'w')
 	print poly_2.summary()

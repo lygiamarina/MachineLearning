@@ -1,10 +1,10 @@
-                            GLS Regression Results                            
+                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                   Col6   R-squared:                       0.024
-Model:                            GLS   Adj. R-squared:                  0.024
+Model:                            OLS   Adj. R-squared:                  0.024
 Method:                 Least Squares   F-statistic:                     42.26
-Date:                Wed, 26 Nov 2014   Prob (F-statistic):           7.42e-19
-Time:                        08:55:01   Log-Likelihood:                -15503.
+Date:                Tue, 02 Dec 2014   Prob (F-statistic):           7.42e-19
+Time:                        20:51:12   Log-Likelihood:                -15503.
 No. Observations:                3425   AIC:                         3.101e+04
 Df Residuals:                    3422   BIC:                         3.103e+04
 Df Model:                           2                                         
@@ -20,4 +20,3 @@ Prob(Omnibus):                  0.000   Jarque-Bera (JB):         20245528.295
 Skew:                          15.358   Prob(JB):                         0.00
 Kurtosis:                     378.397   Cond. No.                         689.
 ==============================================================================
-Col6 ~ 1 + I(Col3 ** 1) + I(Col3 ** 2) + I(Col3 ** 3)
