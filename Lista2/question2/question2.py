@@ -34,7 +34,7 @@ for d in dList:
 		formulaString += ' + I('+hora+' ** '+str(expo)+')'
 		formulaString += ' + I('+latencia+' ** '+str(expo)+')'
 
-	poly_2 = smFormula.gls(formula=formulaString, data=data).fit()
+	poly_2 = smFormula.ols(formula=formulaString, data=data).fit()
 	
 	
 	sys.stdout = open("summaryD"+str(d)+".txt", 'w')

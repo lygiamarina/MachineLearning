@@ -1,10 +1,10 @@
-                            GLS Regression Results                            
+                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                   Col5   R-squared:                    -142.888
-Model:                            GLS   Adj. R-squared:               -142.972
+Model:                            OLS   Adj. R-squared:               -142.972
 Method:                 Least Squares   F-statistic:                    -1699.
-Date:                Thu, 27 Nov 2014   Prob (F-statistic):               1.00
-Time:                        22:11:52   Log-Likelihood:                -60398.
+Date:                Tue, 02 Dec 2014   Prob (F-statistic):               1.00
+Time:                        21:29:24   Log-Likelihood:                -60398.
 No. Observations:                3425   AIC:                         1.208e+05
 Df Residuals:                    3422   BIC:                         1.208e+05
 Df Model:                           2                                         
