@@ -1,6 +1,7 @@
 import numpy
 import pandas
 import matplotlib.pyplot as pyplot
+import matplotlib.cm as myCmap
 from sklearn.cluster import KMeans
 
 filesDir = "../"

@@ -1,0 +1,70 @@
+
+HMM Overview:
+Number of states: 5
+Number of mixture components: 1
+
+State number 0:
+Initial probability: nan
+  mean: nan
+  variance: nan
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = nan
+      transition to state 1 with probability = nan
+      transition to state 3 with probability = nan
+      transition to state 4 with probability = nan
+    Ingoing transitions:
+      transition from state 0 with probability = nan
+      transition from state 1 with probability = nan
+      transition from state 3 with probability = nan
+      transition from state 4 with probability = nan
+
+State number 1:
+Initial probability: nan
+  mean: nan
+  variance: nan
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = nan
+      transition to state 3 with probability = nan
+    Ingoing transitions:
+      transition from state 0 with probability = nan
+
+State number 2:
+Initial probability: nan
+  mean: nan
+  variance: nan
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+    Ingoing transitions:
+
+State number 3:
+Initial probability: nan
+  mean: nan
+  variance: nan
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = nan
+    Ingoing transitions:
+      transition from state 0 with probability = nan
+      transition from state 1 with probability = nan
+
+State number 4:
+Initial probability: nan
+  mean: nan
+  variance: nan
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = nan
+    Ingoing transitions:
+      transition from state 0 with probability = nan

@@ -1,0 +1,76 @@
+
+HMM Overview:
+Number of states: 5
+Number of mixture components: 1
+
+State number 0:
+Initial probability: 0.1
+  mean: 12316949.5349
+  variance: 55832410618.5
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = 0.142857142857
+      transition to state 1 with probability = 0.833333333333
+      transition to state 2 with probability = 0.0238095238095
+    Ingoing transitions:
+      transition from state 0 with probability = 0.142857142857
+      transition from state 1 with probability = 0.0949868073879
+
+State number 1:
+Initial probability: 0.9
+  mean: 12109241.6086
+  variance: 1.48142339475e+12
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = 0.0949868073879
+      transition to state 1 with probability = 0.878627968338
+      transition to state 2 with probability = 0.0197889182058
+      transition to state 4 with probability = 0.0065963060686
+    Ingoing transitions:
+      transition from state 0 with probability = 0.833333333333
+      transition from state 1 with probability = 0.878627968338
+      transition from state 2 with probability = 0.894736842105
+      transition from state 4 with probability = 1.0
+
+State number 2:
+Initial probability: 0.0
+  mean: 11683916.4
+  variance: 1.02936785023e+12
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 1 with probability = 0.894736842105
+      transition to state 2 with probability = 0.0526315789474
+      transition to state 4 with probability = 0.0526315789474
+    Ingoing transitions:
+      transition from state 0 with probability = 0.0238095238095
+      transition from state 1 with probability = 0.0197889182058
+      transition from state 2 with probability = 0.0526315789474
+
+State number 3:
+Initial probability: 0.0
+  mean: nan
+  variance: nan
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+    Ingoing transitions:
+
+State number 4:
+Initial probability: 0.0
+  mean: 6932186.83333
+  variance: 1.52833329515e+12
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 1 with probability = 1.0
+    Ingoing transitions:
+      transition from state 1 with probability = 0.0065963060686
+      transition from state 2 with probability = 0.0526315789474
