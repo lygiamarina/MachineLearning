@@ -1,0 +1,74 @@
+
+HMM Overview:
+Number of states: 5
+Number of mixture components: 1
+
+State number 0:
+Initial probability: 1.0
+  mean: 12415238.3843
+  variance: 11496606.6082
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = 0.958247025021
+      transition to state 1 with probability = 0.0226287885821
+      transition to state 2 with probability = 0.0102921105336
+      transition to state 3 with probability = 0.00280627532519
+      transition to state 4 with probability = 0.00602580053835
+    Ingoing transitions:
+      transition from state 0 with probability = 0.958247025021
+      transition from state 1 with probability = 1.0
+      transition from state 2 with probability = 0.282688955853
+      transition from state 3 with probability = 1.0
+      transition from state 4 with probability = 1.0
+
+State number 1:
+Initial probability: 0.0
+  mean: 12265020.9949
+  variance: 17540306848.7
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = 1.0
+    Ingoing transitions:
+      transition from state 0 with probability = 0.0226287885821
+
+State number 2:
+Initial probability: 0.0
+  mean: 12415163.3599
+  variance: 4793189.55002
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = 0.282688955853
+      transition to state 3 with probability = 0.717311044147
+    Ingoing transitions:
+      transition from state 0 with probability = 0.0102921105336
+
+State number 3:
+Initial probability: 0.0
+  mean: 12415169.5544
+  variance: 4767034.68841
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = 1.0
+    Ingoing transitions:
+      transition from state 0 with probability = 0.00280627532519
+      transition from state 2 with probability = 0.717311044147
+
+State number 4:
+Initial probability: 0.0
+  mean: 12415285.9386
+  variance: 4385019.53461
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = 1.0
+    Ingoing transitions:
+      transition from state 0 with probability = 0.00602580053835

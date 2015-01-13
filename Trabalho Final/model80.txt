@@ -12,42 +12,46 @@ Initial probability: 1.0
   Class : 0
     Outgoing transitions:
       transition to state 0 with probability = 0.992256637168
-      transition to state 1 with probability = 0.00442477876106
+      transition to state 1 with probability = 0.00221238938053
+      transition to state 2 with probability = 0.00221238938053
       transition to state 3 with probability = 0.00110619469027
       transition to state 4 with probability = 0.00221238938053
     Ingoing transitions:
       transition from state 0 with probability = 0.992256637168
-      transition from state 1 with probability = 0.75
+      transition from state 1 with probability = 1.0
+      transition from state 2 with probability = 0.5
       transition from state 3 with probability = 1.0
       transition from state 4 with probability = 1.0
 
 State number 1:
 Initial probability: 0.0
-  mean: 12413469.0
-  variance: 6558721.0
+  mean: 12248596.0
+  variance: 39077931820.5
   fix: 0
 
   Class : 0
     Outgoing transitions:
-      transition to state 0 with probability = 0.75
-      transition to state 3 with probability = 0.25
+      transition to state 0 with probability = 1.0
     Ingoing transitions:
-      transition from state 0 with probability = 0.00442477876106
+      transition from state 0 with probability = 0.00221238938053
 
 State number 2:
 Initial probability: 0.0
-  mean: nan
-  variance: nan
+  mean: 12410908.0
+  variance: 39077931820.5
   fix: 0
 
   Class : 0
     Outgoing transitions:
+      transition to state 0 with probability = 0.5
+      transition to state 3 with probability = 0.5
     Ingoing transitions:
+      transition from state 0 with probability = 0.00221238938053
 
 State number 3:
 Initial probability: 0.0
   mean: 12407724.0
-  variance: 0.0
+  variance: 39077931820.5
   fix: 0
 
   Class : 0
@@ -55,12 +59,12 @@ Initial probability: 0.0
       transition to state 0 with probability = 1.0
     Ingoing transitions:
       transition from state 0 with probability = 0.00110619469027
-      transition from state 1 with probability = 0.25
+      transition from state 2 with probability = 0.5
 
 State number 4:
 Initial probability: 0.0
-  mean: 12248596.0
-  variance: 0.0
+  mean: 12416030.0
+  variance: 39077931820.5
   fix: 0
 
   Class : 0

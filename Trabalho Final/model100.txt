@@ -1,0 +1,100 @@
+
+HMM Overview:
+Number of states: 5
+Number of mixture components: 1
+
+State number 0:
+Initial probability: 0.45
+  mean: 12178622.4338
+  variance: 8.52840773361e+11
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = 0.494923857868
+      transition to state 1 with probability = 0.00507614213198
+      transition to state 2 with probability = 0.0177664974619
+      transition to state 3 with probability = 0.0837563451777
+      transition to state 4 with probability = 0.39847715736
+    Ingoing transitions:
+      transition from state 0 with probability = 0.494923857868
+      transition from state 1 with probability = 0.5
+      transition from state 2 with probability = 0.368421052632
+      transition from state 3 with probability = 0.367346938776
+      transition from state 4 with probability = 0.444759206799
+
+State number 1:
+Initial probability: 0.0
+  mean: 6932186.83333
+  variance: 1.52833329515e+12
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = 0.5
+      transition to state 3 with probability = 0.25
+      transition to state 4 with probability = 0.25
+    Ingoing transitions:
+      transition from state 0 with probability = 0.00507614213198
+      transition from state 2 with probability = 0.0526315789474
+      transition from state 3 with probability = 0.0204081632653
+      transition from state 4 with probability = 0.0028328611898
+
+State number 2:
+Initial probability: 0.0
+  mean: 11683916.4
+  variance: 1.02936785023e+12
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = 0.368421052632
+      transition to state 1 with probability = 0.0526315789474
+      transition to state 2 with probability = 0.0526315789474
+      transition to state 3 with probability = 0.263157894737
+      transition to state 4 with probability = 0.263157894737
+    Ingoing transitions:
+      transition from state 0 with probability = 0.0177664974619
+      transition from state 2 with probability = 0.0526315789474
+      transition from state 3 with probability = 0.030612244898
+      transition from state 4 with probability = 0.0198300283286
+
+State number 3:
+Initial probability: 0.1
+  mean: 11913802.58
+  variance: 2.83290655827e+12
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = 0.367346938776
+      transition to state 1 with probability = 0.0204081632653
+      transition to state 2 with probability = 0.030612244898
+      transition to state 3 with probability = 0.234693877551
+      transition to state 4 with probability = 0.34693877551
+    Ingoing transitions:
+      transition from state 0 with probability = 0.0837563451777
+      transition from state 1 with probability = 0.25
+      transition from state 2 with probability = 0.263157894737
+      transition from state 3 with probability = 0.234693877551
+      transition from state 4 with probability = 0.101983002833
+
+State number 4:
+Initial probability: 0.45
+  mean: 12135576.9948
+  variance: 1.46368253041e+12
+  fix: 0
+
+  Class : 0
+    Outgoing transitions:
+      transition to state 0 with probability = 0.444759206799
+      transition to state 1 with probability = 0.0028328611898
+      transition to state 2 with probability = 0.0198300283286
+      transition to state 3 with probability = 0.101983002833
+      transition to state 4 with probability = 0.43059490085
+    Ingoing transitions:
+      transition from state 0 with probability = 0.39847715736
+      transition from state 1 with probability = 0.25
+      transition from state 2 with probability = 0.263157894737
+      transition from state 3 with probability = 0.34693877551
+      transition from state 4 with probability = 0.43059490085

@@ -3,10 +3,13 @@ import numpy
 import pandas
 import ghmm
 import datetime
+import scipy.stats as spyStats
+from sklearn.cluster import KMeans
 
 
 filesDir = "./"
-filesName = ["78.txt", "80.txt", "100.txt", "105.txt"]
+filesName = ["53.txt", "78.txt", "80.txt", "100.txt", "105.txt"]
+nStates = 5
 
 for fileName in filesName:
 	data = pandas.DataFrame()
@@ -26,21 +29,32 @@ for fileName in filesName:
 	
 	numberDays = len(training.loc[data.Hora == 00])
 	
+	trainingCopy = training.copy()
+	del trainingCopy['Data']
+	del trainingCopy['Hora']
+	del trainingCopy['Vazao']
+	
+	clustering = KMeans(n_clusters=nStates)
+	clustering.fit(trainingCopy)
+	labels = numpy.array(clustering.labels_)
+	
+	training['Cluster'] = labels
+	
+	
 	maxLatencia = training.Latencia.max()
 	
-	statesLabel = [20,40,60,80,100]
-	rangeLatencia = {}
+	statesLabel = range(nStates)
+	states = {}
 	pi = []
 	transition = []
 	
 	for i in statesLabel:
-		resultLatencia = training.loc[(training.Latencia > ((i-20)*maxLatencia/100.0)) & (training.Latencia <= (i*maxLatencia/100.0))]
-		numberDaysState = len(resultLatencia.loc[resultLatencia.Hora == 00])
-		rangeLatencia[i] = resultLatencia
+		resultState = training.loc[training.Cluster == i]
+		numberDaysState = len(resultState.loc[resultState.Hora == 00])
+		states[i] = resultState
 		pi.append((1.0*numberDaysState)/(1.0*numberDays))
 		transition.append([])
 	
-	print rangeLatencia
 	possibilities = []
 	for i in statesLabel:
 		poss = 0.0
@@ -48,15 +62,15 @@ for fileName in filesName:
 			freq = 0.0
 			for h in range(24):
 				if h < 23:
-					resultHi = rangeLatencia[i].loc[rangeLatencia[i].Hora == h]
-					resultHj = rangeLatencia[j].loc[rangeLatencia[j].Hora == h+1]
+					resultHi = states[i].loc[states[i].Hora == h]
+					resultHj = states[j].loc[states[j].Hora == h+1]
 					result = pandas.merge(resultHi, resultHj, on='Data', how='inner')
 				else:
-					resultHi = rangeLatencia[i].loc[rangeLatencia[i].Hora == h]
-					resultHj = rangeLatencia[j].loc[rangeLatencia[j].Hora == 00]
+					resultHi = states[i].loc[states[i].Hora == h]
+					resultHj = states[j].loc[states[j].Hora == 00]
 					result = pandas.merge(resultHi, resultHj, on='Data', how='inner')
 				freq += len(result)
-			transition[(i/20)-1].append(freq)
+			transition[i].append(freq)
 			poss += freq
 		possibilities.append(poss)
 
@@ -67,7 +81,7 @@ for fileName in filesName:
 		for j in range(len(statesLabel)):
 			if (possibilities[i] > 0):
 				transition[i][j] = transition[i][j]/possibilities[i]
-		vazao = numpy.array(rangeLatencia[(i+1)*20].Vazao.get_values())
+		vazao = numpy.array(states[i].Vazao.get_values())
 		mean = numpy.mean(vazao)		
 		var = numpy.var(vazao)
 		std = numpy.std(vazao)
@@ -102,12 +116,26 @@ for fileName in filesName:
 			emissionTraining.append(emissionTrainingNP[i])
 			
 	emissionTraining = ghmm.EmissionSequence(ghmmFloat, emissionTraining)
-		
-	sys.stdout = open('model'+fileName+'.txt', 'w')
+
+	sys.stdout = open('model'+fileName, 'w')
 	print hmm.verboseStr()
 
 	hmm.baumWelch(emissionTraining)
 
-	sys.stdout = open('model'+fileName+'BAUM.txt', 'w')
+	sys.stdout = open('modelBAUM'+fileName, 'w')
 	print hmm.verboseStr()
-	break
+	
+	nHours = len(real)
+	predicted = hmm.sampleSingle(nHours)
+	realVazao = real.Vazao.get_values()
+	
+	sys.stdout = open('predict'+fileName, 'w')
+	print predicted.verboseStr()
+	
+	RMSLE = 0.0
+	for i in range(nHours):
+		sub = numpy.log(predicted[i]+1) - numpy.log(realVazao[i] + 1)
+		RMSLE += numpy.square(sub)
+	RMSLE = numpy.sqrt(RMSLE/nHours)
+	
+	print 'RMSLE = ',RMSLE
