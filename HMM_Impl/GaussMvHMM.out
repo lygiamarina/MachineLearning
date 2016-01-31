@@ -1,0 +1,28 @@
+HMM WITH MULTIVARIATE GAUSSIAN EMISSION DISTRIBUTION
+
+==MODEL PARAMETERS==
+# states: 2
+
+# pi shape: (2L,)
+0.41633
+0.58367
+
+# transition A shape: (2L, 2L)
+0.57    0.41   
+0.44    0.53   
+
+# b shape: (2L, 6L)
+0.71    0.00    0.08    0.11    0.08    0.03   
+0.74    0.00    0.07    0.09    0.07    0.02   
+
+
+==TRAIN AND TEST RESULTS==
+# Training set shape: (40L, 1L)
+Training set likelihood: -760.147695293
+Training set state sequence error: 0.6
+Training set state sequence likelihood: 7.23662171067e-27
+
+# Test set shape: (10L, 1L)
+Test set likelihood: -62.0833442069
+Test set state sequence error: 0.7
+Test set state sequence likelihood: 1.68867458525e-07
